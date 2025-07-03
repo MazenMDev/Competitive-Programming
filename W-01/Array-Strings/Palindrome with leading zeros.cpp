@@ -1,41 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    string n;
-    cin >> n;
-    int i = n.length();
-    int j = 0;
-    int count = 0;
-    while(true){
-        if (n.length() % 2 != 0)
-        {
-            if (n[j] == n[i])
-            {
-                count++;
-            }
-            else{
-                count = -1;
-                break;
-            }
-        }
-        else{
-            n.push_back(0);
-            if (n[j] == n[i])
-            {
-                count++;
-            }
-            else{
-                count = -1;
-                break;
-            }
-        }
-    }
-    if (count == -1)
-    {
-        cout << "No" << endl;
-    }
-    else{
-        cout << "Yes" << endl;
-    }
+int main() {
+	string number;
+	cin >> number;
+
+	int check = 1;
+	while (!number.empty() and number.back() == '0') {
+		number.pop_back();
+	}
+	int i = (int)number.length() - 1;
+	int j = 0;
+	while (j < i) {
+		if (number[j] != number[i])
+		{
+			check = 0;
+			break;
+		}
+		j++; i--;
+	}
+	if (check)
+	{
+		cout << "Yes" << endl;
+	}
+	else cout << "No" << endl;
 }

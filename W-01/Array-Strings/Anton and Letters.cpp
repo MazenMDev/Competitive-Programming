@@ -1,11 +1,18 @@
 #include <iostream>
-using namespace std;
+#include <string>
+#include <set>
+using  namespace std;
 
-int main(){
-    string letters;
-    cin >> letters;
-    string store[26];
-    for(int i=1; i<letters.length(); i++){
-        store[i] = letters[i];
+int main() {
+    string let;
+    getline(cin, let);
+    set<char>letters;
+    for (int i = 0; i < (int)let.length(); i++) {
+        if (let[i] != '{' and let[i] != '}' and let[i] != ',' and let[i] != ' ')
+        {
+            char c = let[i];
+            letters.insert(c);
+        }
     }
+    cout << (int)letters.size() << endl;
 }
