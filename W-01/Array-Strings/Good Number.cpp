@@ -6,19 +6,22 @@ int main(){
     cin >> number;
     int k;
     cin >> k;
-    int count = 0;
-    for(int i=0; i<number; i++){
-        int num;
+    int ans = 0;
+    while(number--){
+        string num;
         cin >> num;
-        while(num != 0){
-            int n = num % 10;
-            num /= 10;
-            if (n <= k)
-            {
-                count++;
+        bool valid = true;
+        for(int i=0 ;i<=k ;i++){
+            char tochar = i + 48;
+            if(num.find(tochar) == -1){
+                valid = false;
                 break;
             }
         }
+        if (valid)
+        {
+            ans++;
+        }
     }
-    cout << count << endl;
+    cout << ans << endl;
 }
