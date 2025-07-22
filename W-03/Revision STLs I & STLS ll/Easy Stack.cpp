@@ -1,5 +1,5 @@
 #include <iostream> 
-#include <deque>
+#include <stack>
 using namespace std;
 
 
@@ -9,20 +9,20 @@ int main() {
     int number;
     cin >> number;
     cin.ignore();
-    deque<int>stack;
+    stack<int>st;
     int command, num;
     while (number--) {
         cin >> command;
         if (command == 1) {
             cin >> num;
-            stack.push_back(num);
+            st.push(num);
         }
         else if (command == 2) {
-            if (!stack.empty()) stack.pop_back();
+            if (!st.empty()) st.pop();
         }
         else if (command == 3) {
-            if (stack.empty()) cout << "Empty!\n";
-            else cout << stack.back() << '\n';
+            if (st.empty()) cout << "Empty!\n";
+            else cout << st.top() << '\n';
         }
     }
 
