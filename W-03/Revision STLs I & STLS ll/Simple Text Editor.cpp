@@ -1,33 +1,37 @@
-// #include <iostream>
-// #include <stack>
-// using namespace std;
+#include <iostream>
+#include <stack>
+using namespace std;
 
-// int main(){
-//     ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
-
-//     int number;
-//     cin >> number;
-//     int cmd;
-//     string st;
-//     stack<string>save;
-//     while (number--)
-//     {
-//         cin >> cmd;
-//         if(cmd == 1){
-//             cin >> st;
-//             save.push(st);
-//         }
-//         else if(cmd == 2){
-//             cin >> del;
-//             while(del--) save.pop();
-//         }
-//         else if(cmd == 3){
-//             cin >> pt;
-//             cout << save.top()
-//         }
-//         else if(cmd == 4){
-
-//         }
-//     }
-    
-// }
+int main() {
+    int number;
+    cin >> number;
+    int num, del, t;
+    string save, st;
+    stack<string>store;
+    while (number--)
+    {
+        cin >> num;
+        if (num == 1) {
+            cin >> st;
+            store.push(save);
+            save += st;
+        }
+        else if (num == 2) {
+            cin >> del;
+            store.push(save);
+            while (del--) {
+                if(!save.empty()) save.pop_back();
+            }
+        }
+        else if (num == 3) {
+            cin >> t;
+            cout << save[t-1] << endl;
+        }
+        else if (num == 4) {
+            if (!store.empty()) {
+                save = store.top();
+                store.pop();
+            }
+        }
+    }
+}
