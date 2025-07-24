@@ -1,27 +1,25 @@
-// #include <iostream>
-// #include <algorithm>
-// using namespace std;
+#include <iostream>
+#include <queue>
+using namespace std;
 
-// int main() {
-//     int number;
-//     cin >> number;
-//     int save = number;
-//     int* num = new int[number];
-//     int i = 0;
-//     while (save--) {
-//         cin >> num[i++];
-//     }
-//     sort(num, num + number);
-//     reverse(num, num + number);
-//     int sum = 0; int count = 0;
-//     for (int i = 0; i < number; i++) {
-//         sum += num[i];
-//         count++;
-//         if (sum < 0) { 
-//             sum -= num[i];
-//             cout << --count << endl;
-//             return 0;
-//         }
-//     }
-//     cout << count << endl;
-// }
+int main() {
+    ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+
+    int number;
+    cin >> number;
+    priority_queue< int, vector<int>, greater<int> > save;
+    int num, count = 0;
+    long long sum = 0;
+    while (number--) {
+        cin >> num;
+        sum += num;
+        save.push(num);
+        count++;
+        if (sum < 0) {
+            sum -= save.top();
+            save.pop();
+            count--;
+        }
+    }
+    cout << count << endl;
+}
