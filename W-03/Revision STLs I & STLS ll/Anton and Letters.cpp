@@ -11,7 +11,5 @@ int main(){
         let.insert(c);
     }
 
-    for(auto c:let){
-        cout << c << endl;
-    }
+    cout << let.size() << endl;
 }
