@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//To optimize I/O operations for faster execution
 void fast_io() {
     ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
 #ifndef ONLINE_JUDGE
