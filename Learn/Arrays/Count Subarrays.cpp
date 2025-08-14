@@ -24,15 +24,12 @@ int32_t main() {
         for(int i=0; i<n; i++){
             count++;
             track = num[i];
-            cout << "track !!!! " << track << endl;
             for(int j=i+1; j<n; j++){
                 if(num[j] > track) {
                     count++;
                     track = num[j];
                 }
                 else{
-                    cout << "num[j] " << num[j] << endl;
-                    cout << "track " << track << endl;
                     break;
                 }
             }
