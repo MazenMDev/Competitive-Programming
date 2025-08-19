@@ -11,6 +11,9 @@ void fast_io() {
 #endif
 }
 
+
+//SayHelloToMyLittleFriend
+//Say_Hello_To_My_Little_Friend
 int32_t main(){
     fast_io();
 
