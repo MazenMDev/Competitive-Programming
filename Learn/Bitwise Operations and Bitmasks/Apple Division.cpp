@@ -27,7 +27,7 @@ int32_t main(){
     int32_t sum1 = 0; int32_t sum2 = 0;
     int32_t diff = 0;
     int32_t mn = INT32_MAX;
-    for(int mask = 0; mask <(1 << number) ; mask++){
+    for(int mask = 0; mask < (1 << number) ; mask++){
         sum1 = 0; sum2 = 0;
         for(int j=0; j < number ;j++){
             if((mask >> j) & 1){
