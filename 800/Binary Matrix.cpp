@@ -30,6 +30,6 @@ int main() {
             }
             if (count1 % 2 != 0) countcol++;
         }
-        cout << max(countrow,countcol) << endl;
+        cout << min(countrow,countcol) << endl;
     }
 }
