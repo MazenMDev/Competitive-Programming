@@ -8,12 +8,19 @@ void fast_io() {
 #endif
 }
 
-int main() {
+int32_t main(){
     fast_io();
 
-    int32_t number;
-    cin >> number;
-
-
-    return 0;
+    int32_t t;
+    cin >> t;
+    while (t--)
+    {
+        int32_t x, n;
+        cin >> x >> n;
+        if(n % 2 == 0){
+            cout << 0 << endl;
+        }
+        else cout << x << endl;
+    }
+    
 }
