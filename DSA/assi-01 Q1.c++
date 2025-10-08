@@ -7,13 +7,13 @@ public:
     CNode* pnext;
 };
 
-int32_t main() {
+int main() {
     CNode* phead = NULL;
     CNode* ptail = NULL;
     CNode* pnn;
-    int32_t number;
+    int number;
     cin >> number;
-    for (int32_t i = 0; i < number; i++) {
+    for (int i = 0; i < number; i++) {
         pnn = new CNode();
         cin >> pnn->info;
         pnn->pnext = NULL;
@@ -27,11 +27,11 @@ int32_t main() {
         }
     }
 
-    int32_t target;
+    int target;
     cin >> target;
     CNode* p = phead;
-    int32_t pos = -1;
-    for (int32_t i = 0; i < number; i++) {
+    int pos = -1;
+    for (int i = 0; i < number; i++) {
         if (p->info == target) {
             pos = i;
             break;
@@ -42,13 +42,13 @@ int32_t main() {
         cout << "Not Found" << endl;
     }
     else {
-        int32_t quarter = pos / 4;
-        int32_t save = quarter;
-        int32_t loop = 1;
-        int32_t totQ2 = 0;
-        int32_t totQ4 = 0;
+        int quarter = pos / 4;
+        int save = quarter;
+        int loop = 1;
+        int totQ2 = 0;
+        int totQ4 = 0;
         CNode* p = phead;
-        for (int32_t i = 0; i < pos; i++) {
+        for (int i = 0; i < pos; i++) {
             if (loop == 2) {
                 totQ2 += p->info;
             }
