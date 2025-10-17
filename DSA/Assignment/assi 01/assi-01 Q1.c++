@@ -16,7 +16,7 @@ int main() {
     for (int i = 0; i < number; i++) {
         pnn = new CNode();
         cin >> pnn->info;
-        pnn->pnext = NULL;
+        pnn->pnext = NULL;  
         if (phead == NULL) {
             phead = pnn;
             ptail = pnn;
