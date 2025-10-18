@@ -27,8 +27,6 @@ class Clist{
         ptail = pnn;
       }
     }
-
-
 };
 
 int main(){

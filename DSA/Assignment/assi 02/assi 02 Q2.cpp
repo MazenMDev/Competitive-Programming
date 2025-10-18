@@ -42,14 +42,12 @@ int main() {
         mainList.Att(pnn);
     }
 
-    //------------------------------------------------------
-    // 🔹 Version 1: Reverse the list in-place
-    //------------------------------------------------------
+
     CNode* prev = NULL;
     CNode* curr = mainList.phead;
     CNode* next = NULL;
 
-    mainList.ptail = mainList.phead; // old head becomes new tail
+    mainList.ptail = mainList.phead; 
 
     while (curr != NULL) {
         next = curr->pnext;
@@ -57,7 +55,7 @@ int main() {
         prev = curr;
         curr = next;
     }
-    mainList.phead = prev; // new head after reversal
+    mainList.phead = prev; 
 
     cout << "=== ReverseList Version 1 (In-place) ===" << endl;
     cout << "Reversed main list: ";
@@ -68,10 +66,7 @@ int main() {
     }
     cout << endl;
 
-    //------------------------------------------------------
-    // 🔹 Version 2: Reverse by creating a new copied list
-    //------------------------------------------------------
-    // Rebuild main list again for version 2 (since it’s reversed now)
+
     mainList.phead = NULL;
     mainList.ptail = NULL;
     cin >> n;
@@ -82,7 +77,7 @@ int main() {
         mainList.Att(pnn);
     }
 
-    // Create reversed copy
+
     CNode* revHead = NULL;
     CNode* revTail = NULL;
     p = mainList.phead;
